@@ -1,10 +1,8 @@
 import os
-
 import torch
 import pickle
 from tqdm import tqdm
 import math
-
 import numpy as np
 
 def compute_model_diff(model0, model1, device='cuda'):

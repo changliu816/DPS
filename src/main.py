@@ -5,7 +5,6 @@ import torch
 import os
 import sys
 sys.path.append(os.getcwd())
-import torch.nn.functional as F
 
 from src.models.eval import evaluate
 from src.models.flyp_loss import flyp_loss

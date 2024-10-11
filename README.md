@@ -6,12 +6,10 @@ Code for the paper Discrepancy-Guided Parameter Suppression for Robust Fine-tuni
 ## Setting up conda env
 ```bash
 bash install.sh
-
-cd DPS && mkdir checkpoints
-export PYTHONPATH="$PYTHONPATH:$PWD"
+cd DPS && mkdir checkpoints && export PYTHONPATH="$PYTHONPATH:$PWD"
 ```
 
-### Datasets 
+## Datasets 
 
 ```bash
 mkdir -p ./datasets/data/ && wget https://worksheets.codalab.org/rest/bundles/0x6313da2b204647e79a14b468131fcd64/contents/blob/ -O ./datasets/data/iwildcam_v2.0.zip --no-check-certificate
@@ -21,7 +19,7 @@ unzip ./datasets/data/iwildcam_v2.0.zip -d ./datasets/data/ # Try manually unzip
 python datacreation_scripts/iwildcam.py
 ```
 
-#### Launch Script
+## Launch Script
 
 - Fine-tuning CLIP ViT-B/16 with cross entropy loss
 ```bash
