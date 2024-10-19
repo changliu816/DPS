@@ -6,7 +6,7 @@ Code for the paper Discrepancy-Guided Parameter Suppression for Robust Fine-tuni
 ## Setting up conda env
 ```bash
 bash install.sh
-cd DPS && mkdir checkpoints && export PYTHONPATH="$PYTHONPATH:$PWD"
+mkdir checkpoints && export PYTHONPATH="$PYTHONPATH:$PWD"
 ```
 
 ## Datasets 
@@ -30,7 +30,7 @@ python src/main.py --algorithm=ce --train-dataset=IWildCamIDVal --epochs=20 --lr
 
 - Fine-tuning CLIP ViT-B/16 with DPS (Loaded FT model with CE loss)
 ```bash
-python src/main.py --algorithm=dps --masking=0.3 --train-dataset=IWildCamIDVal --epochs=20 --lr=1e-5 --wd=0.2 --batch-size=64 --model=ViT-B/16 --eval-datasets=IWildCamIDVal,IWildCamID,IWildCamOOD --template=iwildcam_template  --save=./checkpoints/ --data-location=./datasets/data/ --ft_data="./datasets/csv/iwildcam_v2.0/train.csv" --csv-img-key filepath --csv-caption-key title --exp_name=iwildcam/dps_loss_mask0.3 --clip_load="./checkpoints/iwildcam/ce_loss/_BS64_WD0.2_LR1e-05_run1/checkpoint_7.pt"
+python src/main.py --algorithm=dps --masking=0.9 --train-dataset=IWildCamIDVal --epochs=20 --lr=1e-5 --wd=0.2 --batch-size=64 --model=ViT-B/16 --eval-datasets=IWildCamIDVal,IWildCamID,IWildCamOOD --template=iwildcam_template  --save=./checkpoints/ --data-location=./datasets/data/ --ft_data="./datasets/csv/iwildcam_v2.0/train.csv" --csv-img-key filepath --csv-caption-key title --exp_name=iwildcam/dps_loss_mask0.9 --clip_load="./checkpoints/iwildcam/ce_loss/_BS64_WD0.2_LR1e-05_run1/checkpoint_7.pt"
 
 ```
 

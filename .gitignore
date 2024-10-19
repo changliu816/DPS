@@ -15,6 +15,7 @@ checkpoints/
 data/
 datasets/
 expt_logs/
+!src/datasets/
 
 # pip
 pip-log.txt
