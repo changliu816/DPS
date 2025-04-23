@@ -48,10 +48,9 @@ In this code we refer to the following implementations: [FLYP](https://github.co
 
 If our work or code helps you, please consider to cite our paper. Thank you!
 ```BibTeX
-@inproceedings{liu2024dps,
-  author = {Chang Liu, Jingyu Ma},
-  title = {Discrepancy-Guided Parameter Suppression for Robust Fine-tuning},
-  booktitle = {NeuIPS},
-  year = {2024}
+@inproceedings{liu2024discrepancy,
+  title={Discrepancy-Guided Parameter Suppression for Robust Fine-tuning},
+  author={Liu, Chang and Ma, Jingyu},
+  booktitle={NeurIPS 2024 Workshop on Fine-Tuning in Modern Machine Learning: Principles and Scalability}
 }
 ```
