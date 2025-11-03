@@ -12,11 +12,11 @@ mkdir checkpoints && export PYTHONPATH="$PYTHONPATH:$PWD"
 ## Datasets 
 
 ```bash
-mkdir -p ./datasets/data/iwildcam_v2.0
+mkdir -p ./datasets/data
 
-wget https://worksheets.codalab.org/rest/bundles/0x6313da2b204647e79a14b468131fcd64/contents/blob/ -O ./datasets/data/iwildcam_v2.0.tar.gz --no-check-certificate
+curl -L -o ./datasets/data/iwildcamv2.zip https://www.kaggle.com/api/v1/datasets/download/smeustefan/iwildcamv2
 
-tar -xvf datasets/data/iwildcam_v2.0.tar.gz -C datasets/data/iwildcam_v2.0
+unzip ./datasets/data/iwildcamv2.zip ./datasets/data
 
 python datacreation_scripts/iwildcam.py
 ```
