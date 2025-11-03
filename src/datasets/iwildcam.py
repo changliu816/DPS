@@ -44,7 +44,7 @@ class IWildCam:
                  location=os.path.expanduser('~/data'),
                  remove_non_empty=False,
                  batch_size=128,
-                 num_workers=16,
+                 num_workers=8,
                  classnames=None,
                  subset='train'):
         self.dataset = wilds.get_dataset(dataset='iwildcam', root_dir=location)
