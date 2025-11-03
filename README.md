@@ -12,9 +12,11 @@ mkdir checkpoints && export PYTHONPATH="$PYTHONPATH:$PWD"
 ## Datasets 
 
 ```bash
-mkdir -p ./datasets/data/ && wget https://worksheets.codalab.org/rest/bundles/0x6313da2b204647e79a14b468131fcd64/contents/blob/ -O ./datasets/data/iwildcam_v2.0.zip --no-check-certificate
+mkdir -p ./datasets/data/iwildcam_v2.0
 
-unzip ./datasets/data/iwildcam_v2.0.zip -d ./datasets/data/ # Try manually unzip if it doesn't work
+wget https://worksheets.codalab.org/rest/bundles/0x6313da2b204647e79a14b468131fcd64/contents/blob/ -O ./datasets/data/iwildcam_v2.0.tar.gz --no-check-certificate
+
+tar -xvf datasets/data/iwildcam_v2.0.tar.gz -C datasets/data/iwildcam_v2.0
 
 python datacreation_scripts/iwildcam.py
 ```
