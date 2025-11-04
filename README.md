@@ -16,7 +16,7 @@ mkdir -p ./datasets/data
 
 curl -L -o ./datasets/data/iwildcamv2.zip https://www.kaggle.com/api/v1/datasets/download/smeustefan/iwildcamv2
 
-unzip ./datasets/data/iwildcamv2.zip ./datasets/data
+unzip ./datasets/data/iwildcamv2.zip -d ./datasets/data
 
 python datacreation_scripts/iwildcam.py
 ```
